@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.player {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 15px #0ea5e9;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: 1em;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+#progress {
+  width: 100%;
+  height: 5px;
+  margin: 15px 0;
+  cursor: pointer;
+  background: #475569;
+  border-radius: 5px;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #0ea5e9;
+  border-radius: 50%;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.controls button {
+  background: #0ea5e9;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #0284c7;
+}
+
+.controls button i {
+  font-size: 1.5em;
+  color: white;
+}
+
+#play i.bx-pause {
+  display: none;
+}
+
+#play.playing i.bx-play {
+  display: none;
+}
+
+#play.playing i.bx-pause {
+  display: inline;
+}
+
+#shuffle.active, #repeat.active {
+  color: #22d3ee;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.volume i {
+  font-size: 1.5em;
+  color: #0ea5e9;
+}
+
+#volume {
+  width: 100px;
+  height: 5px;
+  cursor: pointer;
+  background: #475569;
+  border-radius: 5px;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #0ea5e9;
+  border-radius: 50%;
+}
+
+.upload {
+  margin-bottom: 15px;
+}
+
+.upload label {
+  font-size: 0.9em;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.upload input {
+  display: none;
+}
+
+.upload label:hover {
+  color: #0ea5e9;
+}
+
+.playlist {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.playlist div {
+  padding: 10px;
+  font-size: 0.9em;
+  color: #94a3b8;
+  cursor: pointer;
+  border-top: 1px solid #334155;
+}
+
+.playlist div:hover, .playlist div.active {
+  background: #334155;
+  color: white;
+}
+
+@media (max-width: 360px) {
+  .player {
+    width: 280px;
+    padding: 15px;
+  }
+}

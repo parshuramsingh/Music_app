@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="player">
+    <h2 id="title">Title</h2>
+    <h4 id="musician">Artist</h4>
+    <audio id="song" preload="metadata"></audio>
+    <input type="range" value="0" id="progress" min="0" max="100">
+    <div class="timer">
+      <span id="start">00:00</span>
+      <span id="end">00:00</span>
+    </div>
+    <div class="controls">
+      <button onclick="toggleShuffle()"><i class="bx bx-shuffle" id="shuffle"></i></button>
+      <button onclick="prevPlay()"><i class="bx bx-skip-previous"></i></button>
+      <button id="play"><i class="bx bx-play"></i><i class="bx bx-pause"></i></button>
+      <button onclick="nextPlay()"><i class="bx bx-skip-next"></i></button>
+      <button onclick="toggleRepeat()"><i class="bx bx-repeat" id="repeat"></i></button>
+    </div>
+    <div class="volume">
+      <i class="bx bx-volume-full"></i>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+    <div class="upload">
+      <label for="file-upload">Upload Song</label>
+      <input type="file" id="file-upload" accept="audio/*" multiple>
+    </div>
+    <div class="playlist" id="playlist"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
